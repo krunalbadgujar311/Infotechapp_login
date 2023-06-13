@@ -5,7 +5,11 @@ import Logo from "../Image/logo.png"
 import App from "../App"
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Home from './Home';
+import Dashboard from './Dashboard';
+import { signInWithEmailAndPassword } from "firebase/auth";
+
+import InputControl from "./InputControl/InputControl";
+import { auth } from "../Firebase";
 const Login = () => {
     const navigate = useNavigate();
     const initialValues = {
@@ -13,12 +17,38 @@ const Login = () => {
     password: ''
 };
 const handleClick = () => {
-    navigate('/home');
+    navigate('/dashboard');
   };
 const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email address').required('Email Id Required'),
     password: Yup.string().required('Password Required').min(8, 'Password must be at least 8 characters long').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,'Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character')
 });
+const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+  const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+
+  const handleSubmission = () => {
+    if (!values.email || !values.password) {
+      setErrorMsg("Fill all fields");
+      return;
+    }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    signInWithEmailAndPassword(auth, values.email, values.password)
+      .then(async (res) => {
+        setSubmitButtonDisabled(false);
+        
+        navigate("/dashboard");
+      })
+      .catch((err) => {
+        setSubmitButtonDisabled(false);
+        setErrorMsg(err.message);
+      });
+  };
 return (
     <div className="Mainbox">
         <div className="Innerbox">
@@ -32,17 +62,29 @@ return (
                 onSubmit={handleClick}>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="email">Email:</label>
-                        <Field type="email" id="email" name="email" />
+                        
+                        <InputControl
+                        label="Email:"
+                        onChange={(event) =>
+                            setValues((prev) => ({ ...prev, email: event.target.value }))
+                        }
+                        placeholder="Enter email address"
+                        />
                         <ErrorMessage name="email" component="div" className="error" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password:</label>
-                        <Field type="password" id="password" name="password" />
+            
+                        <InputControl
+                        label="Password:"
+                        onChange={(event) =>
+                            setValues((prev) => ({ ...prev, password: event.target.value }))
+                        }
+                        placeholder="Enter Password"
+                        />
                         <ErrorMessage name="password" component="div" className="error" />
                     </div>
-                    <button onClick={handleClick}>Login</button>
-                    <p>Don't Have Account? <Link to="/register">Register Now</Link></p> 
+                    <button disabled={submitButtonDisabled} onClick={handleSubmission}>Login</button>
+                    <p><b>Don't Have Account?{''}</b> <Link to="/register"><b>Register Now</b></Link></p> 
                 </form>
             </Formik>
         </div>
