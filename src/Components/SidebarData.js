@@ -2,14 +2,21 @@ import React from 'react'
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as IoIcons from "react-icons/io"
-
+import logo from '../Image/logo.png'
 export const SidebarData=[
+    {
+        title:'',
+        path:'/home',
+        icon:<img src={logo}/>,
+        cName:'side-text'
+    },
     {
         title:'Home',
         path:'/home',
         icon:<AiIcons.AiFillHome/>,
         cName:'side-text'
     },
+    
     {/*{
         title:'Reports',
         path:'/reports',

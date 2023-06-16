@@ -7,7 +7,11 @@ const Dashboard = () => {
   return (
     <>
     <Sidebar/>
+    <div className="TableName">
+      <a>Employees</a>
+    </div>
     <div className="Outbox">
+    
     <div className="Inbox">
     <PaginationTable/>
     </div>

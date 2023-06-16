@@ -12,7 +12,7 @@ const GlobalFilter = ({filter,setFilter}) => {
         <div className="outer-search">
             Search: {''}
             <input value={value || ''}
-            placeholder='Search'
+            placeholder='Search Records'
             onChange={(e)=>{
                 setValue(e.target.value)
                 onChange(e.target.value)

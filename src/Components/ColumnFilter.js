@@ -12,7 +12,7 @@ const ColumnFilter = ({column}) => {
         <div className="col">
             <input 
                 value={filterValue || ''}
-                placeholder='Search'
+                placeholder='Search Records....'
             onChange={(e) => {
                 setValue(e.target.value)
                 onChange(e.target.value)

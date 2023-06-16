@@ -25,7 +25,7 @@ a{
   align-items: center;
 }
 
-.logo img{
+{/*.logo img{
   position: fixed;
   display: flex;
   width: 940px;
@@ -34,7 +34,7 @@ a{
   top:10px;
   padding-top: 2px;
   padding-left: 750px;
-}
+}*/}
 
 
 .container{
@@ -46,17 +46,28 @@ a{
     align-items:center;
 }
 
-
+.TableName a{
+  color: #aaaaaa;
+  position: fixed;
+  font-size: 60px;
+  top: 1px;
+  left: 750px;
+}
 .outer-search{
     padding-top: 0px;
-    padding-bottom: 10px;
-    padding-left: 350px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    color:rgb(85, 203, 1) ;
+    border: 3px solid rgb(85, 203, 1) ;
 }
+
 .outer-search input{
+  border: none;
   padding-top: 0px;
   width: 500px;
   height: 50px;
 }
+
 .Outbox{
   position:fixed;
   display: flex;
@@ -70,7 +81,7 @@ a{
 }
 .Inbox{
   border: none; /* Reset all borders */
-  border-top: 2px solid black;
+  border-top: 2px solid rgb(85, 203, 1) ;
   box-shadow: rgba(50,50,90,1) 5px 12px 30px -20px;
   overflow-y: scroll; /* Enable vertical scrolling for the content */
   height: calc(100vh - 50px);
@@ -78,17 +89,15 @@ a{
   width: 1315px;
   height: 655px;
   left: 255px;
-  padding-top: 1px;
+  padding-top: 10px;
   padding-bottom: 0px;
-  padding-left: -1px;
+  padding-left: 0px;
   padding-right: 10px;
   /*border: 2px solid black;*/
 }
 table {
   
     /* Enable vertical scrolling for the content */
-    
-      font-family: "Trebuchet MS",Arial, Helvetica, sans-serif;
       border-collapse: collapse;
       width: 100px;
       
@@ -97,30 +106,32 @@ table {
     table td, table th {
       overflow-y: scroll; /* Enable vertical scrolling for the content */
     height: calc(100vh - 50px);
-      columns: 40px;
+      columns: 50px;
       height: 5px;
       width:200px;
       flex-basis: 200px;
-      border: 1px solid #ddd;
+      border: 0px solid #fff;
       
     }
     
-    table tr:nth-child(even){background-color: #f2f2f2;}
-
+   {/* table tr:nth-child(even){background-color: #fff;}*/}
+  
   th{
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     padding-left: 0px;
     padding-right: 0px;
     column-width: 10px;
     .col input{
+      border:none;
       width: 140px;
       position: relative;
-      left:-25px;
+      left:0px;
       padding-right: 1px;
        }
   }
   td {
-    border: 1px solid #ddd;
+    
+    border: 0px solid #fff;
     padding-left: 30px;
     padding-right: 0px;
   }
@@ -129,22 +140,22 @@ table {
   td:first-child {
     position: sticky;
     left: 0;
-    background-color: #f5f5f5;
+    background-color: #fff;
     z-index: 1;
   }
   th:first-child{
     columns: 0px;
-    column-width: 0px;
-    padding-left: 40px;
-    padding-right: 50px;
+    column-width: 20px;
+    padding-left: 30px;
+    padding-right: 70px;
     .col input{
       position: relative;
       width: 50px;
-      left:-15px;
+      left:0px;
        }
   }
   td:first-child {
-    padding-left: 40px;
+    padding-left: 10px;
     padding-right: 10px;
   }
   
@@ -152,6 +163,7 @@ table {
 
 
     table th,tfoot td {
+
       flex-basis: 200px;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -160,16 +172,16 @@ table {
       text-align: left;
       align-items: center;
   
-      background-color: #f2f2f2;
-      color: black;
+      background-color: #fff;
+      color:rgb(85, 203, 1) ;
       transition: background-color 0.3s ease;
   }
   
   table th:hover{
-      background-color: #f2f2f2; 
+      background-color: #fff; 
   }
   tfoot td:hover{
-    background-color: #f2f2f2; 
+    background-color: #fff; 
   }
   table tr:hover{
       background-color: #3F88C5; 
@@ -183,16 +195,16 @@ table {
   
     @keyframes colorShift {
       0% {
-        background-color: #D90429; 
+        background-color: #ff95a7; 
       }
       25% {
-        background-color: #7F6CBF; 
+        background-color: #c8b8ff; 
       }
       50% {
-        background-color: #8338EC; 
+        background-color: #bf91ff; 
       }
       75% {
-        background-color: #17BEBB ; 
+        background-color: #95fffd ; 
       }
       100% {
         background-color: #9B5DE5; 
@@ -270,7 +282,18 @@ table {
       height:50px;
       
   }
-  
+  .side-text img{
+    
+    position: fixed;
+  display: flex;
+  width: 225px;
+  height: 75px;
+  left: 10px;
+  top:10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 2px;
+}
   .side-menu-items {
     
       width: 100%;

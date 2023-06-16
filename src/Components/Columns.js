@@ -3,94 +3,49 @@ import ColumnFilter from './ColumnFilter.js'
 
 export const COLUMNS = [
     {
-        Header: 'Id',
-        Footer:'Id',
-        accessor: 'id',
+        Header: 'EMP_ID',
+        Footer:'EMP ID',
+        accessor: 'empid',
         Filter:ColumnFilter,
         //disableFilters:true
     },
     {
-        Header: 'First Name',
+        Header: 'Name(First)',
         Footer:'First Name',
-        accessor: 'student_first_name',
+        accessor: 'firstName',
         Filter:ColumnFilter
     },
     {
-        Header: 'Last Name',
+        Header: 'Name(Last)',
         Footer:'Last Name',
-        accessor: 'student_last_name',
+        accessor: 'lastName',
         Filter:ColumnFilter
     },
     {
-        Header: 'City',
-        Footer:'City',
-        accessor: 'city',
+        Header: 'Age',
+        Footer:'Age',
+        accessor: 'age',
         Filter:ColumnFilter
     },
     {
-        Header: 'Email Id',
-        Footer:'Email Id',
-        accessor: 'email',
+        Header: 'Visits',
+        Footer:'Visits',
+        accessor: 'visits',
         Filter:ColumnFilter
     },
     {
-        Header: 'Password',
-        Footer:'Password',
-        accessor: 'password',
+        Header: 'Progress',
+        Footer:'Progress',
+        accessor: 'progress',
         Filter:ColumnFilter
     },
     {
-        Header: 'Physics Exam Date',
-        Footer:'Physics Exam Date',
-        accessor: 'physics_exam_date',
-        Cell:({value})=>{return format(new Date(value),'dd/MM/yyyy')},
+        Header: 'Status',
+        Footer:'Status',
+        accessor: 'status',
+        //Cell:({value})=>{return format(new Date(value),'dd/MM/yyyy')},
         Filter:ColumnFilter
-    },
-    {
-        Header: 'Physics Exam Marks',
-        Footer:'Physics Exam Marks',
-        accessor: 'physics_exam_marks',
-        Filter:ColumnFilter
-    },
-    {
-        Header: 'Chemistry Exam Date',
-        Footer:'Chemistry Exam Date',
-        accessor: 'chemistry_exam_date',
-        Cell:({value})=>{return format(new Date(value),'dd/MM/yyyy')},
-        Filter:ColumnFilter
-    },
-    {
-        Header: 'Chemistry Exam Marks',
-        Footer:'Chemistry Exam Marks',
-        accessor: 'chemistry_exam_marks',
-        Filter:ColumnFilter
-    },
-    {
-        Header: 'Mathematics Exam Date',
-        Footer:'Mathematics Exam Date',
-        accessor: 'mathematics_exam_date',
-        Cell:({value})=>{return format(new Date(value),'dd/MM/yyyy')},
-        Filter:ColumnFilter
-    },
-    {
-        Header: 'Mathematics Exam Marks',
-        Footer:'Mathematics Exam Marks',
-        accessor: 'mathematics_exam_marks',
-        Filter:ColumnFilter
-    },
-    {
-        Header: 'Total',
-        Footer:'Total',
-        accessor: 'total_in_3',
-        Filter:ColumnFilter
-    },
-    {
-        Header: 'Percentage',
-        Footer:'Percentage',
-        accessor: 'percentage',
-        Filter:ColumnFilter
-    }
-]
+    }]
 
 export const GROUPED_COLUMNS = [
     {

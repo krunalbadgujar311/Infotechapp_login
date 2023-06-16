@@ -35,7 +35,7 @@ const columns=useMemo(()=>COLUMNS,[])
     state,
     setGlobalFilter
 }=tableInstance
-    //const {globalFilter}=state
+    const {globalFilter}=state
 
 //const {pageIndex,pageSize}=state
   return (
@@ -69,8 +69,8 @@ const columns=useMemo(()=>COLUMNS,[])
         <button onClick={()=>previousPage()} disabled={!canPreviousPage}>Previous</button>
         <button onClick={()=>nextPage()} disabled={!canNextPage}>Next</button>
         <button onClick={()=>gotoPage(pageCount-1)} disabled={!canNextPage}>{'>>'}</button>
-    </div>
-    <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>*/}
+    </div>*/}
+    <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>
     <table {...getTableProps()}>
         <thead>
             {headerGroups.map((headerGroup)=>(
