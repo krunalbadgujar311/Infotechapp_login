@@ -8,10 +8,9 @@ import Products from "./Components/Pages/Products";
 import Reports from "./Components/Pages/Reports";
 import Team from "./Components/Pages/Team";
 import Support from "./Components/Pages/Support";
-import Messages from "./Components/Pages/Messages";
 import About from './Components/Pages/About';
 import Skills from './Components/Pages/Skills';
-import Contact from './Components/Pages/Contact';
+import VideoPage from './Components/Pages/VideoPage';
 import Services from './Components/Pages/Services';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -22,6 +21,7 @@ import {PaginationTable} from './Components/PaginationTable';
 import {FilteringTable} from './Components/FilteringTable';
 import './Components/Navbar.css';
 import './style.scss';
+import AddUSerForm from './Components/Pages/AddUserForm';
 
 
 function App(){
@@ -36,11 +36,11 @@ function App(){
           <Route path="/products" element={<Products/>}/>
           <Route path="/reports" element={<Reports/>}/>
           <Route path="/team" element={<Team/>}/>
-          <Route path="/messages" element={<Messages/>}/>
+          <Route path="/adduser" element={<AddUSerForm/>}/>
           <Route path="/support" element={<Support/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/skills" element={<Skills/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/videopage" element={<VideoPage/>}/>
           <Route path="/services" element={<Services/>}/>
           <Route path="/navbar" element={<Navbar/>}/>
           <Route path="/footer" element={<Footer/>}/>
