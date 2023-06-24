@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.registration-form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 60px;
+  background-color: hsla(0, 0%, 0%, 0.8);
+      padding:20px 60px;
+      border-radius:30px;
+      display:flex;
+      flex-direction: column;
+      gap:0px;
+      align-items: center;
+  border-radius: 60px;
+  }
+
+  .registration-form h1{
+    text-align: center;
+    color:#EDF1D6;
+    font-size: 25px;
+    padding-right: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color:#EDF1D6;
+    font-size: 15px;
+    padding-right: 10px;
+  }
+  
+  input[type='text'],
+  input[type='file'],
+  input[type='email'],
+  input[type='password']
+  textarea{
+     /* Set your desired color here */
+    width: 100%;
+    padding-right: 1px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #EDF1D6;
+    border-radius: 4px;
+  }
+   
+  input[type='file']{
+    color:#EDF1D6;
+  }
+  button{
+    background-color: #405138;
+    width:270px;
+    border: none;
+    border-radius: 30px;
+    color: #EDF1D6;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  button:hover{
+    background-color: #EDF1D6;
+    color: #405138;
+    border: 2px solid #F67280;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
