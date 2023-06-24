@@ -23,27 +23,29 @@ function VideoForm() {
   };
 
   return (
-    <div>
-      <h1>Add Video</h1>
+    <div className='Mainbox1'>
+     <div className='registration-form'>
       <form onSubmit={handleSubmit}>
-        <div>
+      <h1>Add Video</h1>
+        <div className='form-group'>
           <label htmlFor="videoFile">Video File (MP4):</label>
           <input type="file" id="videoFile" accept=".mp4" onChange={handleVideoChange} />
         </div>
-        <div>
+        <div className='form-group'>
           <label htmlFor="thumbnailFile">Thumbnail File (JPG):</label>
           <input type="file" id="thumbnailFile" accept=".jpg" onChange={handleThumbnailChange} />
         </div>
-        <div>
+        <div className='form-group'>
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <div>
+        <div className='form-group'>
           <label htmlFor="description">Description:</label>
           <textarea id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
         <button type="submit">Submit</button>
       </form>
+    </div>
     </div>
   );
 }
