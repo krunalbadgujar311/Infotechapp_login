@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+select {
+    width: 200px;
+    padding: 5px;
+  }
+.Mainbox1{
+    background-color: #40513B;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./Untitled design (2).png');
+}
+.Dropdown{
+    padding-bottom: 10px;
+}
+
+.registration-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: hsla(0, 0%, 0%, 0.8);
+        padding:20px 60px;
+        border-radius:30px;
+        display:flex;
+        flex-direction: column;
+        gap:0px;
+        align-items: center;
+    border-radius: 60px;
+  }
+  
+  .registration-form h1 {
+    text-align: center;
+    color:#EDF1D6;
+    font-size: 25px;
+    padding-right: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color:#EDF1D6;
+    font-size: 15px;
+    padding-right: 10px;
+  }
+  
+  input[type='text'],
+  input[type='number'],
+  input[type='string'],
+  input[type='email'] ,
+  input[type='password']{
+    
+    width: 100%;
+    padding-right: 1px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  button{
+    background-color: #405138;
+    width:270px;
+    border: none;
+    border-radius: 30px;
+    color: #EDF1D6;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  button:hover{
+    background-color: #EDF1D6;
+    color: #405138;
+    border: 2px solid #F67280;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
